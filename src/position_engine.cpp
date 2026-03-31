@@ -24,12 +24,7 @@ std::string PositionEngine::print(const std::string& client_id) const {
     }
     const auto& pos = it->second;
 
-    double unrealized = 0.0;
-    if (pos.netQty > 0) {
-        unrealized = pos.netQty * (currentPrice_ - pos.avgPrice);
-    } else if (pos.netQty < 0) {
-        unrealized = -pos.netQty * (currentPrice_ - pos.avgPrice);
-    }
+    double unrealized = pos.netQty * (currentPrice_ - pos.avgPrice);
 
     std::ostringstream oss;
     oss << R"({"netQty":)" << pos.netQty
