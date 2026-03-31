@@ -2,9 +2,9 @@
   {"status":"OK"},
   {"status":"OK"},
   {"netQty":10,"avgPrice":95.0,"realizedPnL":0,"unrealizedPnL":50},
-  {"netQty":-5,"avgPrice":105.0,"realizedPnL":0,"unrealizedPnL":15},
+  {"netQty":-5,"avgPrice":105.0,"realizedPnL":0,"unrealizedPnL":25},
   {"status":"OK"},
   {"status":"OK"},
   {"status":"OK"},
   {"netQty":7,"avgPrice":95.0,"realizedPnL":18,"unrealizedPnL":49},
-  {"netQty":-3,"avgPrice":105.0,"realizedPnL":12,"unrealizedPnL":-9}
+  {"netQty":-3,"avgPrice":105.0,"realizedPnL":12,"unrealizedPnL":9}
