@@ -1,0 +1,11 @@
+
+  { "command": "PRICE", "price": 100.0 }
+  { "command": "FILL","client_id": "IN02000","type": "buy","quantity": 10,"price": 95.0 }
+  { "command": "FILL","client_id": "IN02001","type": "sell", "quantity": 5,"price": 105.0 }
+  { "command": "PRINT","client_id": "IN02000" }
+  { "command": "PRINT","client_id": "IN020001" }
+  { "command": "PRICE","price": 102.0 }
+  { "command": "FILL","client_id": "IN02000","type": "sell","quantity": 3,"price": 101.0 }
+  { "command": "FILL","client_id": "IN02001","type": "buy","quantity": 2, "price": 99.0 }
+  { "command": "PRINT","client_id": "IN02000" }
+  { "command": "PRINT","client_id": "IN020001" }
