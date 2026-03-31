@@ -1,6 +1,6 @@
 # Position & PnL Engine
 
-A WebSocket server that tracks client positions and calculates profit/loss (realized and unrealized) using weighted average cost.
+A WebSocket server that tracks client positions and calculates profit/loss (realized and unrealized) using weighted average cost. We'll assume a global current price that can be updated by any PRICE command(for all client).When a PRICE command arrives, we update it. When a PRINT command arrives for a client, we compute unrealizedPnL using that global price.
 
 Realized PnL: recorded when a trade reduces an existing position. For long positions, realized = qty * (sellPrice - avgPrice). For short positions, realized = qty * (avgPrice - buyPrice). When flipping sides, all of the original position is closed first, then a new position opens.
 
@@ -46,8 +46,21 @@ newAvg = (|netQty| * oldAvg + quantity * tradePrice) / (|netQty| + quantity)
 
 The server runs a single `io_context` thread. All sessions are processed asynchronously on that same thread, so no locking is required. The engine is accessed directly without additional synchronization.
 
-## Calculation Logic
 
-### Net Quantity and Average Price
+# BUILD 
 
-- **Buy orders** – if netQty ≥ 0 (long or flat), the position is averaged:
+--expecting user to be in directory /home/user/ 
+
+
+mkdir build
+
+cd /home/user/build
+
+
+cmake .. 
+make
+
+After successfull completion start the server
+
+./pnl_engine --port 8080
+
