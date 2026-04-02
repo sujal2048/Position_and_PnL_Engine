@@ -64,3 +64,12 @@ After successfull completion start the server
 
 ./pnl_engine --port 8080
 
+# Testing
+
+cd build
+
+cmake .. -DBUILD_TESTS=ON   # if you have an option, 
+
+make
+
+./tests
